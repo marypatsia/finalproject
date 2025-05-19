@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Poster Image -->
+    <ImageView
+        android:id="@+id/imagePoster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/movie_poster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/imagePoster"
+        app:layout_constraintTop_toTopOf="@id/imagePoster"
+        app:layout_constraintEnd_toStartOf="@id/imageFavorite"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Favorite Icon -->
+    <ImageView
+        android:id="@+id/imageFavorite"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/add_to_favorites"
+        android:padding="4dp"
+        android:src="@drawable/ic_heart_outline"
+        app:layout_constraintTop_toTopOf="@id/textTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
