@@ -43,7 +43,7 @@ public class FavoritesFragment extends Fragment {
     }
 
     private void loadFavorites() {
-        Set<String> favoriteIds = FavoritesManager.getAllFavorites(getContext());
+        Set<Integer> favoriteIds = FavoritesManager.getAllFavorites(getContext());
 
         if (favoriteIds.isEmpty()) {
             Toast.makeText(getContext(), "No favorites yet", Toast.LENGTH_SHORT).show();
@@ -59,7 +59,7 @@ public class FavoritesFragment extends Fragment {
                     List<Movie> favoriteMovies = new ArrayList<>();
 
                     for (Movie movie : allMovies) {
-                        if (favoriteIds.contains(String.valueOf(movie.getId()))) {
+                        if (favoriteIds.contains(movie.getId())) {
                             favoriteMovies.add(movie);
                         }
                     }

@@ -8,19 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.movie.adapters.MoviePagerAdapter;
-import com.example.movie.models1.Movie;
-import com.example.movie.models1.MovieResponse;
-import com.example.movie.network2.ApiClient;
-import com.example.movie.network2.TMDBApiService;
 import com.example.movie.utils.NetworkUtils;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_tabs); // This must have viewPager and tabLayout
+        setContentView(R.layout.activity_main_tabs);
 
         if (!NetworkUtils.isConnected(this)) {
             showNoConnectionDialog();
