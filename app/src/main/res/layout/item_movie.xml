@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <!-- Poster Image -->
+
     <ImageView
         android:id="@+id/imagePoster"
         android:layout_width="100dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <!-- Movie Title -->
+
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="0dp"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
-    <!-- Favorite Icon -->
+
     <ImageView
         android:id="@+id/imageFavorite"
         android:layout_width="24dp"

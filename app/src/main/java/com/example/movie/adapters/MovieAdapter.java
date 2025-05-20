@@ -97,7 +97,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         MovieViewHolder(View itemView) {
             super(itemView);
             imagePoster = itemView.findViewById(R.id.imagePoster);
-            imageFavorite = itemView.findViewById(R.id.imageFavorite); // ← connect this to your item_movie.xml
+            imageFavorite = itemView.findViewById(R.id.imageFavorite);
             textTitle = itemView.findViewById(R.id.textTitle);
         }
     }

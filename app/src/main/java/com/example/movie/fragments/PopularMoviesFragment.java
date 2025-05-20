@@ -31,7 +31,7 @@ public class PopularMoviesFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private MovieAdapter adapter;
-    private static final String API_KEY = "a1b2c3d4e5f6"; // Replace with your TMDB API Key
+    private static final String API_KEY = "a1b2c3d4e5f6";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -10,6 +10,7 @@ import retrofit2.http.Query;
 public interface TMDBApiService {
 
     @GET("movie/popular")
+
     Call<MovieResponse> getPopularMovies(
             @Query("api_key") String apiKey,
             @Query("language") String language,
