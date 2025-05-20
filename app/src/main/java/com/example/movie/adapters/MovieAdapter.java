@@ -47,20 +47,20 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         Movie movie = movieList.get(position);
         holder.textTitle.setText(movie.getTitle());
 
-        // Load poster
+
         String imageUrl = "https://image.tmdb.org/t/p/w500" + movie.getPosterPath();
         Glide.with(context)
                 .load(imageUrl)
                 .placeholder(R.drawable.placeholder)
                 .into(holder.imagePoster);
 
-        // Set heart icon state
+
         boolean isFav = FavoritesManager.isFavorite(context, movie.getId());
         holder.imageFavorite.setImageResource(
                 isFav ? R.drawable.ic_heart_filled : R.drawable.ic_heart_outline
         );
 
-        // Toggle favorite on click
+
         holder.imageFavorite.setOnClickListener(v -> {
             boolean currentFav = FavoritesManager.isFavorite(context, movie.getId());
             if (currentFav) {
@@ -72,7 +72,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             }
         });
 
-        // Optional: click to open MovieDetails
+
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, MovieDetailsActivity.class);
             intent.putExtra("title", movie.getTitle());
